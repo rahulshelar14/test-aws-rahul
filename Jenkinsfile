@@ -19,5 +19,11 @@ pipeline {
                 echo 'Deploying...'
             }
         }
+
+        stage('Deploy Static Site') {
+            steps {
+                sh 'sudo cp -r * /var/www/html/'
+            }
+        }
     }
 }
