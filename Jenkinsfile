@@ -21,11 +21,14 @@ pipeline {
         }
 
         stage('Deploy Static Site') {
+           stage('Deploy Static Site') {
             steps {
-               sh '''
-                cp -r /var/lib/jenkins/workspace/MY-DATA_PIPELINE/* /var/www/html/
+                sh '''
+                sudo mkdir -p /var/www/html
+                sudo cp -r /var/lib/jenkins/workspace/MY-DATA_PIPELINE/* /var/www/html/
                 '''
             }
+        }
         }
     }
 }
