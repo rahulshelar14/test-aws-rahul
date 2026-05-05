@@ -22,7 +22,9 @@ pipeline {
 
         stage('Deploy Static Site') {
             steps {
-                sh 'sudo cp -r * /var/www/html/'
+               sh '''
+                cp -r * /var/www/html/
+                '''
             }
         }
     }
