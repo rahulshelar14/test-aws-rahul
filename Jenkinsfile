@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy Static Site') {
             steps {
                sh '''
-                cp -r * /var/www/html/
+                cp -r /var/lib/jenkins/workspace/MY-DATA_PIPELINE/* /var/www/html/
                 '''
             }
         }
