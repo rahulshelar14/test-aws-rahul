@@ -20,7 +20,6 @@ pipeline {
             }
         }
 
-        stage('Deploy Static Site') {
            stage('Deploy Static Site') {
                 steps {
                     sh '''
@@ -29,6 +28,5 @@ pipeline {
                     '''
                 }
             }
-        }
     }
 }
